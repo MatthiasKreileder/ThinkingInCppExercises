@@ -1,1 +1,1 @@
-# ThinkingInCppExercises
+# cpp-makefile-template-test
