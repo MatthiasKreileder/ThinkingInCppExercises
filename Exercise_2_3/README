@@ -1,0 +1,19 @@
+
+Question 2.3 states: Create a program that opens a file and counts the whitespace-separated words in that file.
+
+I implemented an algorithm that counts the words in a provided ASCII file. 
+
+Since it is not defined what is meant by the term "word" I came up with my own rules.
+
+(1) A word consists of one or more alphabetical characters (i.e. a,b,c,...,z as well as A,B,C,...Z)
+(2) Stand-alone non-alphabetical characters (i.e. '#','?' or '!') or groups of them (e.g. '#!?') are not words
+
+
+Some examples might help to clarify
+
+"Hello World" = 2 words
+"Hello, World" = 2 words
+"Hello !" = 1 word
+"#,!A!,#" = 1 word
+
+The last example might be seen as odd, but since 'A' is a valid English word I count this as one word as well.

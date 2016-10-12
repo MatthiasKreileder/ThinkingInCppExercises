@@ -10,6 +10,17 @@ WordCounter::WordCounter(std::string fileName)
 {
 }
 
+/**
+ * The meaty part of the WordCounter class
+ *
+ * The couting happens "on the fly" i.e. while we are reading the file.
+ * This one pass algorithm has the advantage that the file does not have to fit in the machine's
+ * main memory at once (in theory - I did not test that).
+ *
+ * The main drawback is that the while loop does several checks, i.e. a multi pass algorithm that
+ * first reads the input and then sanitises the strings (i.e. remove non-alphabetical characters) before
+ * counting them would be more readable.
+ */
 int WordCounter::numWords(void){
 
 	std::ifstream inFile;
@@ -25,9 +36,9 @@ int WordCounter::numWords(void){
 		std::string tmp;
 		inFile >> tmp;
 
-		// count only non-empty strings (this is an edge case in case the input file is empty
+		// count only non-empty strings (this is an edge case in case the input file is empty)
 		// and
-		// be aware on non-alphabetic characters
+		// be aware of non-alphabetic characters
 		if(tmp.compare("") == 0 || !isWord(tmp))
 			continue;
 
