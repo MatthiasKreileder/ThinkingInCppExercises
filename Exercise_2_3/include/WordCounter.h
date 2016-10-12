@@ -3,7 +3,7 @@
 #define INCLUDE_WORD_COUNTER
 
 #include <string>
-#include <fstream>
+
 
 class WordCounter{
 public:
@@ -14,11 +14,13 @@ public:
 	 */
 	int numWords(void);
 private:
-	
-	int numWordsPriv(void);
 
-	std::ifstream m_inputFile;
-	bool m_invalidFileHandle;
+	/**
+	 * \brief Returns true if \param s is a "word" (according to the def in the README)
+	 */
+	bool isWord(std::string s);
+
+	std::string m_fileName;
 };
 
 #endif

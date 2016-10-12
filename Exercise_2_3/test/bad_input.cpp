@@ -40,5 +40,17 @@ BOOST_AUTO_TEST_CASE(non_existing_input_file)
 	BOOST_CHECK(num == -1);
 }
 
+BOOST_AUTO_TEST_CASE(non_alpha_characters)
+{
+	std::string fileName = "non_alpha_characters.txt";
+	std::string content = "Hello ! ###World### ###";
+	FileGenerator::createFile(fileName,content);
+
+	WordCounter counter(fileName);
+	int num = counter.numWords();
+
+	BOOST_CHECK(num == 2);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
 
