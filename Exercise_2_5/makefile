@@ -7,7 +7,7 @@ BOOST_INCLUDE := /home/matthias/Development/install_dir/boost_install_dir/includ
 BOOST_LIB := /home/matthias/Development/install_dir/boost_install_dir/lib/
 BOOST_LIB_NAMES := -lboost_test_exec_monitor -lboost_unit_test_framework
 
-PROJECT := projectName
+PROJECT := backwards_printer
 
 INCLUDEDIR = include
 SOURCEDIR = src
@@ -59,4 +59,4 @@ $(TESTOBJ): $(TESTBUILD)/%.o : $(TESTDIR)/%.cpp
 #
 .PHONY : clean
 clean:
-	rm -f $(BUILDDIR)/*o $(TESTBUILD)/*o $(OUTPUT_FILES) $(TESTDIR)/*~ *~ 
+	rm -f $(BUILDDIR)/*o $(TESTBUILD)/*o $(OUTPUT_FILES) $(TESTDIR)/*~ *~ *.txt
