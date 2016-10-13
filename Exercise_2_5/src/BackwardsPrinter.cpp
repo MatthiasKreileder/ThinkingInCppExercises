@@ -22,8 +22,7 @@ std::vector<std::string> BackwardsPrinter::getReversedContents(){
 	std::ifstream in(m_fileName.c_str());
 	std::string line;
 	while(getline(in,line)){
-		if(line.compare("")!=0)
-			cont.push(line);
+		cont.push(line);
 	}
 
 
