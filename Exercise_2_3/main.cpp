@@ -13,7 +13,7 @@ int main (int argc, char* argv[])
 	if(argc < 2){
 		std::cout << "Please provide a file name as a command line argument." << std::endl;
 		std::cout << "E.g. your file is called 'yourfile.txt' then invoke the program like this:" << std::endl;
-		std::cout << "$ ./exe yourfile.txt" << std::endl;
+		std::cout << "$ ./word_counter yourfile.txt" << std::endl;
 		return 0;
 	}
 	else{
