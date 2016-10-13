@@ -7,7 +7,7 @@
 
 
 #define BOOST_TEST_DYN_LINK
-#include <boost_install_dir/include/boost/test/unit_test.hpp>
+#include <boost/test/unit_test.hpp>
 
 #include "FileGenerator.h"
 #include <fstream>

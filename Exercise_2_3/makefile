@@ -3,7 +3,7 @@
 CC = g++
 FLAGS = -g -c
 
-BOOST_INCLUDE := /home/matthias/Development/install_dir
+BOOST_INCLUDE := /home/matthias/Development/install_dir/boost_install_dir/include/
 BOOST_LIB := /home/matthias/Development/install_dir/boost_install_dir/lib/
 BOOST_LIB_NAMES := -lboost_test_exec_monitor -lboost_unit_test_framework
 
@@ -19,10 +19,11 @@ HEADERS = $(wildcard $(INCLUDEDIR)/*.h)
 TESTSRC = $(wildcard $(TESTDIR)/*.cpp)
 TESTOBJ = $(patsubst $(TESTDIR)/%.cpp,$(TESTBUILD)/%.o,$(TESTSRC))
 
+project = word_counter
 MYLIB := mattslib.a
-OUTPUT_FILES := exe main.o $(MYLIB) check
+OUTPUT_FILES := exe main.o $(MYLIB) check $(project)
 
-all: dir exe
+all: dir $(project)
 
 dir:
 	mkdir -p $(BUILDDIR) $(TESTBUILD)
@@ -30,7 +31,7 @@ dir:
 #
 # Executable
 #
-exe : main.cpp $(MYLIB) 
+$(project) : main.cpp $(MYLIB) 
 	$(CC) $< $(MYLIB) -o $@
 
 #
