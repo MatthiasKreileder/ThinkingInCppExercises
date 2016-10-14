@@ -1,0 +1,40 @@
+
+QUESTION
+========
+
+Question 4.20 states: How big is a structure? Write a piece of code that prints the size of various structures. 
+Create structures that have data members only and ones that have data members and function members. Then create a structure that has no members at all. 
+Print out the sizes of all these. Explain the reason for the result of the structure with no data members at all.
+
+ANSWER
+======
+
+Approach and Observations
+-------------------------
+I created a source file main.cpp which defines four structs that differ in the amount and type of members they hold and (if any) functions they define and then creates one object of each of those structs. Then the objects' sizes get streamed to std::cout. Most things contain little suprises but an object of type 'OneFunction' which doesn't hold any member variables has the size of one byte (see the subsection 'Possible Explanation' for a reasoning why things workd that way), at first sight that's odd.
+
+Executing
+
+$ make && ./bin
+
+will display what is described above.
+
+Possible Explanation
+--------------------
+
+My guess why C++ behaves as decribed in the previous subsection comes in two parts, where 'Part I - Refering to Chapter 4' parrots back what I read in the book and 'Part II - Looking into the binary' where I try to visualize the problem.
+
+Part I - Refering to Chapter 4
+
+The key sections in the book that explain why objects of structs without data members occupy a non-zero amount of space in the main memory is "Object Details" by stating "One of the fundamental rules of objects is that each object must have a unique address, so structures with no data members will always have some minimum nonzero size." and "What's an object" which says "In C++, an object is just a variable, and the purest definition is “a region of storage” (this is a more specific way of saying, “an object must have a unique identifier,” which in the case of C++ is a unique memory address)".
+
+Part II - Looking into the binary
+
+I wrote a minimal example which visualizes the problem:
+
+// File contents of memoryLayout.cpp
+01 struct EmptyStruct{};
+02 EmptyStruct emptyStuct;
+03 int someInteger;
+
+If you invoke 'make memoryLayout' you get 'high-level' assembly code of that. Looking into memoryLayout.txt we see that the compiler puts 'empytStruct' at memory location zero and it spans over exactly one byte. Because of the alignment done by g++ 'someInteger' is put at location 4, i.e. without the dummy byte inside emptyStruct two distint objects would live at the same location in memory which contradicts the fact that they are distinct. At least that's what I understood so far :D 
