@@ -5,9 +5,7 @@
 
 int main (int argc, char* argv[])
 {
-	/**
-	 * Read names of input files
-	 */
+
 	std::vector<std::string> inputFiles;
 	if(argc < 2){
 		std::cout << "Please provide a file name as a command line argument." << std::endl;
