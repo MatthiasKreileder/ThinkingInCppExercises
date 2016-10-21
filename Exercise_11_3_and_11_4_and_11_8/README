@@ -1,0 +1,26 @@
+
+QUESTION
+========
+
+11.3
+Write a program in which you try to (1) Create a reference that is not initialized when it is created. 
+(2) Change a reference to refer to another object after it is initialized. (3) Create a NULL reference.
+
+11.4
+Write a function that takes a pointer argument, modifies what the pointer points to, and then returns the destination 
+of the pointer as a reference
+
+11.8
+Create a function that takes a char& argument and modifies that argument. In main( ), print out a char variable, call your 
+function for that variable, and print it out again to prove to yourself that it has been changed. How does this affect program readability?
+
+APPROACH
+========
+
+I inserted comments into main.cpp which I think are sufficient.
+
+OBSERVATIONS
+============
+
+I was a bit puzzled about how to achieve 11.3 subquestion (2) 'Change a reference to refer to another object after it is initialized'. Is there a syntax which
+allows you to express that in code?!
