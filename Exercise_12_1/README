@@ -1,0 +1,18 @@
+
+QUESTION
+========
+
+Create a simple class with an overloaded operator++. Try calling this operator in both 
+pre- and postfix form and see what kind of compiler warning you get.
+
+APPROACH
+========
+
+I developed a simple class called 'Integer' which provides two overloads for post and prefix increment.
+In the main function I create an object on type 'Integer' and invoke both operators
+
+OBSERVATIONS
+============
+
+Even with the -Wall flag g++ didn't criticize my code... If there is a lesson's learned that I missed here I would
+be happy about feedback.
