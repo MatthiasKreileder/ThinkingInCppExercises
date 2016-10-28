@@ -1,0 +1,31 @@
+
+Question
+========
+
+Create two classes called Traveler and Pager without default constructors, but with constructors
+that take an argument of type string, which they simply copy to an internal string variable. For
+each class, write the correct copy-constructor and assignment operator. Now inherit a class
+BusinessTraveler from Traveler and give it a member object of type Pager. Write the correct
+default constructor, a constructor that takes a string argument, a copy-constructor, and an
+assignment operator.
+
+Approach
+========
+
+I created all classes as stated in the question description.
+
+The file main.cpp creates two objects of type BusinessTraveler, namely "first" and "second".
+Then the assigment operator is used to copy the data from "first" to "second".
+Then both objects are streamed to std::cout.
+
+Please execute 
+$ make && ./bin
+
+to run main(). The output format is described below.
+
+Output format
+-------------
+
+You should see two lines where each line has the same structure:
+"contents of the object named <object_name>:" Traveler_string=<content of the string stored in Traveler> Pager_string=<content of the string stored in Pager>
+
