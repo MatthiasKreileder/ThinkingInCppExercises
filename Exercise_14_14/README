@@ -1,0 +1,54 @@
+
+Question
+========
+
+Question 2.3 states: Create a program that opens a file and counts the whitespace-separated words in that file.
+
+Algorithm
+=========
+
+I implemented an algorithm that counts the words in a provided ASCII file. 
+
+Since it is not defined what is meant by the term "word" I came up with my own rules.
+
+(1) A word consists of one or more alphabetical characters (i.e. a,b,c,...,z as well as A,B,C,...Z)
+(2) Stand-alone non-alphabetical characters (i.e. '#','?' or '!') or groups of them (e.g. '#!?') are not words
+
+
+Some examples might help to clarify
+
+"Hello World" = 2 words
+"Hello, World" = 2 words
+"Hello !" = 1 word
+"#,!A!,#" = 1 word
+
+The last example might be seen as odd, but since 'A' is a valid English word I count this as one word as well.
+
+Build
+=====
+
+To build the source code execute make in the top level directory (i.e. the one that contains the makefile :).
+A binary named word_counter should be created.
+
+Run
+===
+
+You need to provide the binary an ASCII text file (I assume your file is called 'yourFile.txt') and invoke the program like this: 
+$ ./word_counter yourFile.txt
+
+Test
+====
+
+If you want to build and run the tests then please first open the makefile and set the two variables BOOST_INCLUDE and BOOST_LIB to the path where you have installed
+boost on your system (I used Boost 1.60.0).
+
+Then type
+
+$ make check
+
+and that should run the unit tests.
+
+Contact
+=======
+
+Many thanks for reading through the entire README file! For hugs and bugs leave me a message to matthias.kreileder@gmail.com I will my best to provide you a swift reply.
