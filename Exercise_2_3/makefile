@@ -3,8 +3,8 @@
 CC = g++
 FLAGS = -g -c
 
-BOOST_INCLUDE := /home/matthias/Development/install_dir/boost_install_dir/include/
-BOOST_LIB := /home/matthias/Development/install_dir/boost_install_dir/lib/
+BOOST_INCLUDE := /home/matt/Dev/boost_install_dir/include/
+BOOST_LIB := /home/matt/Dev/boost_install_dir/lib/
 BOOST_LIB_NAMES := -lboost_test_exec_monitor -lboost_unit_test_framework
 
 INCLUDEDIR = include
