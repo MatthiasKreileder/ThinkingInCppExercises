@@ -33,8 +33,10 @@ A binary named word_counter should be created.
 Run
 ===
 
-You need to provide the binary an ASCII text file (I assume your file is called 'yourFile.txt') and invoke the program like this: 
+You need to provide the binary an ASCII text file (I assume your file is called 'yourFile.txt') and invoke the program like this:
+$ echo "My name is Matt" >> fileName.txt 
 $ ./word_counter yourFile.txt
+fileName.txt contains 4 words
 
 Test
 ====

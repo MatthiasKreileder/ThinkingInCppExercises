@@ -11,7 +11,7 @@ ANSWER
 
 Approach and Observations
 -------------------------
-I created a source file main.cpp which defines four structs that differ in the amount and type of members they hold and (if any) functions they define and then creates one object of each of those structs. Then the objects' sizes get streamed to std::cout. Most things contain little suprises but an object of type 'OneFunction' which doesn't hold any member variables has the size of one byte (see the subsection 'Possible Explanation' for a reasoning why things workd that way), at first sight that's odd.
+I created a source file main.cpp which defines four structs that differ in the amount and type of members they hold and (if any) functions they define and then creates one object of each of those structs. Then the objects' sizes get streamed to std::cout. Most things contain little suprises but an object of type 'OneFunction' which doesn't hold any member variables has the size of one byte (see the subsection 'Possible Explanation' for a reasoning why things work that way), at first sight that's odd.
 
 Executing
 

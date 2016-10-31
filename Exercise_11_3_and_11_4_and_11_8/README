@@ -22,5 +22,4 @@ I inserted comments into main.cpp which I think are sufficient.
 OBSERVATIONS
 ============
 
-I was a bit puzzled about how to achieve 11.3 subquestion (2) 'Change a reference to refer to another object after it is initialized'. Is there a syntax which
-allows you to express that in code?!
+I was a bit puzzled about how to achieve 11.3 subquestion (2) 'Change a reference to refer to another object after it is initialized'. Is there a syntax which allows you to express that in code?! It would defeat the purpose of references in the first place if I am not mistaken (but I guess that is the lesson's learned here).

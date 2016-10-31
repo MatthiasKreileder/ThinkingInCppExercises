@@ -2,8 +2,7 @@
 QUESTION
 ========
 
-Create a three-level hierarchy of classes with default constructors, along with destructors, both of
-which announce themselves to cout. Verify that for an object of the most derived type, all three
+Create a three-level hierarchy of classes with default constructors, along with destructors, both of which announce themselves to cout. Verify that for an object of the most derived type, all three
 constructors and destructors are automatically called. Explain the order in which the calls are
 made.
 
@@ -20,7 +19,6 @@ Executing
 $ make && ./bin
 
 will show the order of ctor and dtor calls.
-The constructors calls starts with the base class and end with the most derived type (probably for several reasons but the most obvious one
-is that a derived class constructor may want to use base class functionality or members it has access to).
+The constructor calls starts with the base class and end with the most derived type (probably for several reasons but the most obvious one is that a derived class constructor may want to use base class functionality or members it has access to).
 
 The destructors calls start with the most derived class and end with the base class.

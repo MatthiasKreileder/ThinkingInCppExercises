@@ -9,20 +9,15 @@ APPROACH
 ========
 
 The file main.cpp contains two macros, namely F and G.
-F is the  macro that doesn't expand properly and G is the fixed version of F (i.e. expands in the way we
-want it to expand).
+F is the  macro that doesn't expand properly and G is the fixed version of F (i.e. expands in the way we want it to expand).
 
-In order to make this code compilable the 'call' to F is commented out. A further block comment in main.cpp describes
-the problem in more detail.
+In order to make this code compilable the 'call' to F is commented out. A further block comment in main.cpp describes the problem in more detail.
 
 OBSERVATIONS
 ============
 
-Except of header guards I never used macros before and therefore this question was a bit new to me. I found out
-that 'cpp' the preprocessor can be very helpful to visualise the result of the preprocessor output.
+Except of header guards I never used macros before and therefore this question was a bit new to me. I found out that 'cpp' the preprocessor can be very helpful to visualise the result of the preprocessor output.
 
-One can uncomment the marcro call to F(1) and then execute 'cpp main.cpp' and see why the preprocessed main.cpp file
-is not compileable.
+One can uncomment the marcro call to F(1) and then execute 'cpp main.cpp' and see why the preprocessed main.cpp file is not compileable.
 
-Also it is quite shocking that a simple cpp program which consist of just a handful of lines of code expands to more than 17k lines of
-preprocessed code (which comes from the <iostream> include, but still ...).
+Also it is quite shocking that a simple c++ program which consist of just a handful of lines of code expands to more than 17k lines of preprocessed code (which comes from the <iostream> include, but still ...).

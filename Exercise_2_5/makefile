@@ -49,6 +49,7 @@ $(OBJECTS): $(BUILDDIR)/%.o : $(SOURCEDIR)/%.cpp $(HEADERS)
 #
 check : $(TESTOBJ) $(MYLIB)
 	$(CC) $^ -L ${BOOST_LIB} $(BOOST_LIB_NAMES) -Wl,-rpath=${BOOST_LIB} -o $@
+	./check
 
 # This lines means: "All files in the list $(TESTOBJ) should be created by compiling the corresponding .c files into .o files"
 $(TESTOBJ): $(TESTBUILD)/%.o : $(TESTDIR)/%.cpp

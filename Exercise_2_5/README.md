@@ -32,17 +32,6 @@ $ make check
 
 and that should run the unit tests.
 
-For some reason that I could not figure out the boost unit test output is:
-
-"Running 1 test case...
-
-*** No errors detected
-*** Error in `./check': corrupted double-linked list: 0x0000000000a1d210 ***
-Aborted (core dumped)"
-
-Even if I do not invoke a single statement inside the defined unit test... Therefore the error doesn't seem to be in my designed class. I would be more than happy for some feedback concerning this. 
-
-
 Contact
 =======
 
