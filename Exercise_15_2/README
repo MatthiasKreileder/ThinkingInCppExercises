@@ -1,0 +1,56 @@
+
+QUESTION
+========
+
+Modify Exercise 1 so draw( ) is a pure virtual function. Try creating an object of type Shape. Try
+to call the pure virtual function inside the constructor and see what happens. Leaving it as a pure
+virtual, give draw( ) a definition.
+
+APPROACH
+========
+
+The file main.cpp contains the code to that questions. Please proceed with:
+$ make
+$ ./bin
+
+OBSERVATIONS
+============
+
+The question 15.2 contains three subquestions and I going to describe them step by step
+
+Subquestion 15.2.1 : draw( ) is a pure virtual function - Try creating an object of type Shape
+----------------------------------------------------------------------------------------------
+
+Trying to create an object of type Shape (when Shape contains a pure virtual function) like this:
+Shape sh;
+
+leads to a compile time error.
+
+When Shape is an abstract class we cannot create an object of that type
+quoting g++: "error: cannot declare variable ‘sh’ to be of abstract type ‘Shape’"
+
+Subquestion 15.2.2 : Try to call the pure virtual function inside the constructor
+---------------------------------------------------------------------------------
+
+Calling the pure virtual function Shape::draw() inside the Shape constructor leads to a link time error:
+"undefined reference to `Shape::draw()'", because no definition of the function can be found.
+
+Subquestion 15.2.3 : Leaving it as a pure virtual, give draw( ) a definition.
+-----------------------------------------------------------------------------
+
+To my surprise it is possible to give a definition for a pure virtual function. Maybe I am missing a subtle reason why this is
+possible (please let me know, I would be very interested in knowing why) but allowing definitions for pure virtual functions 
+defeats the purpose of the concept of pure virtual functions or not?
+
+When I want to create an object of the abstract class it does not compile which makes sense.
+
+
+
+
+
+
+
+
+
+
+
