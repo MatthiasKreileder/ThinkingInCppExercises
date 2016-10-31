@@ -1,0 +1,27 @@
+
+QUESTION
+========
+
+Expanding on Exercise 2, create a function that takes a Shape object by value and try to upcast a
+derived object in as an argument. See what happens. Fix the function by taking a reference to the
+Shape object.
+
+APPROACH
+========
+
+The file main.cpp contains the code to that questions. Please proceed with:
+$ make
+$ ./bin
+
+OBSERVATIONS
+============
+
+Subquestion 15.3.1 - create a function that takes a Shape object by value and try to upcast a derived object in as an argument
+------------------------------------------------------------------------------------------------------------------------------
+
+This function doen't compile because it tries to create an object of an abstract class.
+
+Subquestion 15.3.2 - Fix the function by taking a reference to the Shape object
+-------------------------------------------------------------------------------
+
+This compiles without problems.
